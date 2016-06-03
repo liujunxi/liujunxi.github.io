@@ -1,4 +1,54 @@
-#taobao{
-    width:100%;height:100%;
-    background:red;
+#taobao-header{
+      height: .44rem;
+      background-color: #259E93;
+      @include flexbox();
+      @include align-items(center);
+      @include justify-content(center);
+      
+      div{
+          width:3rem;
+          height: .3rem;
+          background-color:#fff;
+           @include flexbox();
+//        @include border-radius(.05rem);
+          div{
+              height:.3rem;
+              
+              &:nth-child(1){
+                  width:.28rem;
+                  img{
+                      width:100%;
+                      height:100%;
+                  }
+              }
+               &:nth-child(3){
+                  width:.85rem;
+                  img{
+                      width:100%;
+                      height:100%;
+                  }
+              }
+              &:nth-child(2){
+                  @include flex();
+                  input{
+                      width:100%;
+                      height: .28rem;
+                      outline:none;
+                      border:none;
+                      font-size: .12rem;
+                  }
+              }
+          }
+      }
+      
+}
+.taobao-section{
+      @include flex();
+      width:100%;
+      overflow: hidden;
+      background-color:#EAEAEA;
+      img{
+          width:100%;
+          height:100%;
+      }
 }

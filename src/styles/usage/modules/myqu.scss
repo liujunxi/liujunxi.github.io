@@ -1,4 +1,143 @@
-#myqu{
-    width:100%;height:100%;
-    background:yellow;
+#myqu-header{
+      height: .44rem;
+      background-color: #000;
+      ul{
+          width:100%;
+          height:100%;
+          @include flexbox();
+          li:nth-of-type(1){
+             width: .69rem;
+             height:.44rem;
+             @include flexbox();
+             @include justify-content(center);
+             @include align-items(center);
+             img{
+                 width: .3rem;
+                 height: .3rem;
+             }
+          }
+          li:nth-of-type(2){
+              @include flex();
+              height:100%;
+              color:#fff;
+              font-size: .2rem;
+              line-height:.44rem;
+              text-align:center;
+             
+          }
+          li:nth-of-type(3){
+              width: .69rem;
+          }    
+          
+      }
+      
+}
+
+.myqu-section{
+      @include flex();
+      width:100%;
+      overflow: hidden;
+      background-color:#eaeaea;
+      & > *{
+          width:100%;
+      }
+      div{
+          height: .4rem;
+          background-color:#fff;
+          @include flexbox();
+          @include align-items(center);
+          &:nth-child(1){
+              margin: .18rem 0 .01rem;
+          }
+          i{
+              display:inline-block;
+              width: .6rem;
+              text-indent: .1rem;
+              font-size:.14rem;
+          }
+          input{
+              width: 2rem;
+              height:.2rem;
+              outline:  none;
+              border:none;
+          }
+          
+      }
+      .login{
+          height: .49rem;
+          margin-top: .2rem;
+          background-color:#eaeaea;
+          @include justify-content(center);
+          a{
+              display:block;
+              width: 2.89rem;
+              height: .49rem;
+              color:#fff;
+              font-size: .16rem;
+              line-height: .49rem;
+              text-align:center;
+              background-color:#FF3D39;
+              @include border-radius(.05rem);
+              
+          }
+      }
+      p{
+          height: .52rem;
+          @include flexbox();
+          @include align-items(center);
+          i{
+              display:block;
+              text-align: center;
+              font-size: .14rem;
+             &:nth-child(1){
+                 width: 1rem;
+                 
+             } 
+             &:nth-child(2){
+                 @include flex();
+             } 
+              &:nth-child(3){
+                 width: 1.15rem;
+                 color:red;
+             } 
+          }
+      }
+      ul{
+          height: .3rem;
+          @include flexbox();
+          li{
+              height: .3rem;
+              &:not(:nth-child(2)){
+                  width: 1rem;
+                  @include flexbox();
+                  @include justify-content(center);
+                  i{
+                      display:inline-block;
+                      width:.70rem;
+                      height: .15rem;
+                      @include border(0 0 1px 0,#aaa)
+                  }
+              }
+              &:nth-child(2){
+                  @include flex();
+                  color:#808080;
+                  text-align:center;
+                  line-height:.3rem;
+                  font-size: .14rem;
+              }
+          }
+      }
+      .title{
+          height:1.04rem;
+          background-color:#eaeaea;
+          @include flexbox();
+              img{
+                 
+                  height: .58rem;
+                 width: .58rem;
+                 margin-left:.177rem;
+              }
+         
+         
+      }
 }

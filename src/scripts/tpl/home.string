@@ -16,7 +16,7 @@
   		</li>
   	</ul>
   </header>
-  <nav id="home-nav">
+  <nav id="home-nav" spa-widget="scroll" data-scroll-id="navScroll" >
   	<ul id="index-nav">
   		<li class="active" action-type="switch.swiper">全部分类</li>
   		<li action-type="switch.swiper">今日上新</li>

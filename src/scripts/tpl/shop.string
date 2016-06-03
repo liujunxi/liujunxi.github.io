@@ -1,4 +1,18 @@
-<div id="">
-	shop
-	
-</div>
+  <header id="shop-header">
+  	<ul>
+  		<li>&nbsp;</li>
+  		<li>商城返利</li>
+  		<li class="yo-ico">&#xe65e;</li>
+  	</ul>
+  </header>
+  <nav id="shop-nav">
+  	<ul>
+  		<li class="active">综合商城</li>
+  		<li>团购网站</li>
+  		<li>旅游票务</li>
+  		
+  	</ul>
+  </nav>
+  <section id="index-scroll" spa-widget="scroll" class="shop-section">
+  	<img src="../../../images/shop-center1.png" />
+  </section>	

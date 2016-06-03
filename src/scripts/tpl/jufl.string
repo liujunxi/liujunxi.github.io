@@ -6,19 +6,19 @@
   		<li class="yo-ico">&#x343b;</li>
   	</ul>
   </header>
-  <nav id="jufl-nav">
+  <nav id="jufl-nav"  spa-widget="scroll" data-scroll-id="navScroll">
   	<ul>
-  		<li class="active">全部分类</li>
-  		<li>今日上新</li>
-  		<li>家居</li>
-  		<li>食品</li>
-  		<li>服饰</li>
-  		<li>美妆</li>
-  		<li>数码家电</li>
-  		<li>母婴</li>
-  		<li>鞋包配饰</li>
-  		<li>文体其他</li>
-  		<li>明日预告</li>
+  		<li class="active"  action-type="switch.swiper">全部分类</li>
+  		<li action-type="switch.swiper">今日上新</li>
+  		<li action-type="switch.swiper">家居</li>
+  		<li action-type="switch.swiper">食品</li>
+  		<li action-type="switch.swiper">服饰</li>
+  		<li action-type="switch.swiper">美妆</li>
+  		<li action-type="switch.swiper">数码家电</li>
+  		<li action-type="switch.swiper">母婴</li>
+  		<li action-type="switch.swiper">鞋包配饰</li>
+  		<li action-type="switch.swiper">文体其他</li>
+  		<li action-type="switch.swiper">明日预告</li>
   	</ul>
   </nav>
   <section id="index-scroll" spa-widget="scroll" class="jufl-section">

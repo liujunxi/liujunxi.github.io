@@ -73,6 +73,7 @@ SPA.defineView('index', {
 		        }
 		      });
 	    },
+	   
 	    
  	}
 	

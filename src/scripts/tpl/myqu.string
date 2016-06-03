@@ -1,4 +1,40 @@
-<div id="">
-	myqu
-	
-</div>
+  <header id="myqu-header">
+  	<ul>
+  		<li>
+  			<img src="../../../images/mipmap-xhdpi-v4/btn_back.png"/>
+  		</li>
+  		<li>登录</li>
+  		<li></li>
+  	</ul>
+  </header>
+  
+  <section id="index-scroll" spa-widget="scroll" class="myqu-section">
+  	<div>
+  		<i>账号</i>
+  		<input type="text" name="" id="" value="" placeholder="请输入邮箱、手机号"/>
+  	</div>
+  	<div>
+  		<i>密码</i>
+  		<input type="text" name="" id="" value="" placeholder="请输入密码"/>
+  	</div>
+  	<div class="login">
+  		<a>登录账号</a>
+  	</div>
+  	<p>
+  		<i>忘记密码？</i>
+  		<i></i>
+  		<i>10秒免费注册</i>
+  	</p>
+  	<ul>
+  		<li><i></i></li>
+  		<li>免费注册&nbsp;一键登录</li>
+  		<li><i></i></li>
+  	</ul>
+  	<div class="title">
+  			<img src="../../../images/mipmap-xhdpi-v4/signin_qq.png"/>
+  			<img src="../../../images/mipmap-xhdpi-v4/signin_taobao.png"/>
+  			<img src="../../../images/mipmap-xhdpi-v4/signin_weibo.png"/>
+  			<img src="../../../images/mipmap-xhdpi-v4/signin_weixin.png"/>
+  	</div>
+  </section>	
+ 

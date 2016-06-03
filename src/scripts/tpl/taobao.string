@@ -1,3 +1,17 @@
-<div id="">
-	taobao
-</div>
+  <header id="taobao-header">
+  	<div >
+  		<div>
+  			<img src="../../../images/taobao-h-s.png"/>
+  		</div>
+  		<div >
+	  		<input type="text" name="" value="" id="input1" placeholder="搜淘宝商品拿返利, 搜啥都有返利" autofocus="autofocus"/>
+  		</div>
+  		<div>
+  			<img src="../../../images/tobao-h-r.png"/>
+  		</div>
+  	</div>
+  </header>
+  <section id="index-scroll" spa-widget="scroll" class="taobao-section">
+  		<img src="../../../images/toabao-center.png"/>
+  </section>	
+  
