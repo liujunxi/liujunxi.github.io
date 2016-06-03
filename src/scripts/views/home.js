@@ -13,5 +13,13 @@ SPA.defineView('home', {
 	    	navScroll.options.scrollY = false;
 	    }
 	    
- 	}
+ 	},
+ 	
+ 	
+ 	bindActions: {
+ 	 "scroolTop" : function(e){
+	    	var myScroll = new IScroll('#index-scroll', {});
+	    	myScroll.scrollTo(0, 0, 100, IScroll.utils.ease.quadratic   );
+	    },
+	}
 });

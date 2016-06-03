@@ -35,9 +35,9 @@
   		</li>
   	</ul>
   </footer>
-  <div class="scroolTop" action-type="scroolTop" data-scroll-id="indexScroll">
+  <!--<div class="scroolTop" action-type="scroolTop" data-scroll-id="indexScroll">
   	<img src="../../../images/mipmap-xhdpi-v4/side_bg_up.png" />
-  </div>
+  </div>-->
   <div class="scroolSearch">
   	<img src="../../../images/mipmap-xhdpi-v4/side_bg_search.png" />
   </div>

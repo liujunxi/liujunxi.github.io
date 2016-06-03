@@ -26,27 +26,23 @@ SPA.defineView('index', {
 	},
 	bindActions: {
 	    'switch.swiper': function (e) {
-	      this.setActive2($(e.el));					//给当前元素添加BG；
+	      this.setActive2($(e.el));					//给当前元素添加border；
 	      this.indexSwiper.slideTo($(e.el).index());//点击nav 控制下方视图
-	      
-	      
 	    },
+	    //回到顶部
 	    "scroolTop" : function(e){
-	    	
 	    	var myScroll = new IScroll('#index-scroll', {});
 	    	myScroll.scrollTo(0, 0, 100, IScroll.utils.ease.quadratic   );
-	    	
 	    },
 	    
 	    'switch.view': function (e) {
 	      // 视图切换方法
-	      console.log(e.data.tag)
-	      this.modules.content.launch(e.data.tag);
-	      this.setActive($(e.el));
+	      
+	      this.modules.content.launch(e.data.tag);//控制主视图切换
+	      this.setActive($(e.el));				//给当前元素添加border
 	      this.indexSwiper = new Swiper('#containerSwiper', {
 		        loop: false,
-		        onSlideChangeStart: function (swiper) {
-		        	
+		        onSlideChangeStart: function (swiper) {					//主题轮播控制导航
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
 		        }
