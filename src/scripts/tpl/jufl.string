@@ -1,0 +1,43 @@
+
+  <header id="jufl-header">
+  	<ul>
+  		<li>&nbsp;</li>
+  		<li>巨返利</li>
+  		<li class="yo-ico">&#x343b;</li>
+  	</ul>
+  </header>
+  <nav id="jufl-nav">
+  	<ul>
+  		<li class="active">全部分类</li>
+  		<li>今日上新</li>
+  		<li>家居</li>
+  		<li>食品</li>
+  		<li>服饰</li>
+  		<li>美妆</li>
+  		<li>数码家电</li>
+  		<li>母婴</li>
+  		<li>鞋包配饰</li>
+  		<li>文体其他</li>
+  		<li>明日预告</li>
+  	</ul>
+  </nav>
+  <section id="index-scroll" spa-widget="scroll" class="jufl-section">
+  	<ul>
+  		<li>
+  			<img src="../../../images/jfl-2.png"/>
+  		</li>
+  		<li>
+  			<img src="../../../images/jufl-1.png"/>
+  		</li>
+  		<li>
+  			<img src="../../../images/jufl-1.png"/>
+  		</li>
+  		<li>
+  			<img src="../../../images/jufl-1.png"/>
+  		</li>
+  		<li>
+  			<img src="../../../images/jufl-1.png"/>
+  		</li>
+  	</ul>
+  </section>	
+  

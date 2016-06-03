@@ -1,0 +1,69 @@
+.m-index {
+  width:100%;
+  height:100%;
+  @include flexbox();
+  @include flex-direction(column)
+  & > * {
+      width:100%;
+  }
+  >div{
+      @include flex();
+      width:100%;
+      position: relative;
+  }
+  footer{
+      height: .49rem;
+       background-color:#fff;
+      ul{
+          width:100%;
+          height:100%;
+          @include flexbox();
+          
+          li{
+              @include flex();
+              @include flexbox();
+              @include justify-content(center);
+              @include align-items(center);
+              @include flex-direction(column);
+              i{
+                  img{
+                      width:0.22rem;
+                      height:0.22rem;
+                  }
+              }
+              b{  
+                  color: $color;
+                  font-size: 0.1rem;  
+                  font-weight:normal;
+                  &.active{
+                      color: #26AEA4;
+                  }
+              }
+              
+          }
+      }
+  }
+  //--回到顶部
+  .scroolTop{
+      width: .5rem;
+      height: .5rem;
+      position:fixed;
+      bottom:1.18rem;
+      right:.1rem;
+      img{
+          width:100%;
+          height:100%;
+      }
+  }
+  .scroolSearch{
+      width: .5rem;
+      height: .5rem;
+      position:fixed;
+      bottom:.58rem;
+      right:.1rem;
+      img{
+          width:100%;
+          height:100%;
+      }
+  }
+}
