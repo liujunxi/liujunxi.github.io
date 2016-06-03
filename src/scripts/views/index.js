@@ -30,10 +30,10 @@ SPA.defineView('index', {
 	      this.indexSwiper.slideTo($(e.el).index());//点击nav 控制下方视图
 	    },
 	    //回到顶部
-	    "scroolTop" : function(e){
-	    	var myScroll = new IScroll('#index-scroll', {});
-	    	myScroll.scrollTo(0, 0, 100, IScroll.utils.ease.quadratic   );
-	    },
+//	    "scroolTop" : function(e){
+//	    	var myScroll = new IScroll('#index-scroll', {});
+//	    	myScroll.scrollTo(0, 0, 100, IScroll.utils.ease.quadratic   );
+//	    },
 	    
 	    'switch.view': function (e) {
 	      // 视图切换方法
