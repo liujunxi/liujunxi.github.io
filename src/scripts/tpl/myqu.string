@@ -8,7 +8,7 @@
   	</ul>
   </header>
   
-  <section id="index-scroll" spa-widget="scroll" class="myqu-section">
+  <section id="index-scroll" class="myqu-section">
   	<div>
   		<i>账号</i>
   		<input type="text" name="" id="" value="" placeholder="请输入邮箱、手机号"/>

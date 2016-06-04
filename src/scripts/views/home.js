@@ -14,12 +14,12 @@ SPA.defineView('home', {
 	    }
 	    
  	},
- 	
- 	
  	bindActions: {
- 	 "scroolTop" : function(e){
-	    	var myScroll = new IScroll('#index-scroll', {});
-	    	myScroll.scrollTo(0, 0, 100, IScroll.utils.ease.quadratic   );
+	    'switch.swiper': function (e) {
+	      this.setActive2($(e.el));					//给当前元素添加border；
+	      this.indexSwiper.slideTo($(e.el).index());//点击nav 控制下方视图
+	    
 	    },
-	}
+ 	}
+
 });
