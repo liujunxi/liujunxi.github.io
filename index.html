@@ -4,10 +4,17 @@
 		<meta charset="UTF-8">
 		<title>利趣</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link rel="stylesheet" type="text/css" href="./prd/styles/usage/app@42a6525f9e598e64125e643418c7859b.css"/>
+		<link rel="stylesheet" type="text/css" href="./prd/styles/usage/app@ver.css"/>
 	</head>
 	<body>
 		
 	</body>
-	<script src="./prd/scripts/app@4eb859ed2b73d22169a57761e9f74220.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./prd/scripts/app@ver.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+      document.ontouchmove = function(e) {
+          if (e.target.tagName.toUpperCase() !== 'IFRAME') {
+              e.preventDefault();
+          }
+      };
+ 	 </script>
 </html>

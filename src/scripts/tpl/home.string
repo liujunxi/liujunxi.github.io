@@ -32,7 +32,14 @@
   	</ul>
   </nav>
   <section id="index-scroll" spa-widget="scroll"  data-scroll-id="indexScroll" class="home-section">
-  	<div class="swiper-container" id="containerSwiper">
+  	
+  	<div class="swiper-container" id="containerSwiper" ms-visible="!isShowlLoading">
+  		<!------------------------>
+  	<div class="head">
+              <img src="../../../images/arrow.png"/>
+              <span>下拉刷新...</span>
+    </div>
+    <!------------------------------>
 			 <div class="swiper-wrapper">
 			    <div class="swiper-slide">
 			      <!------1-------------------->
@@ -137,28 +144,28 @@
 										</ul>
 									</div>
 									<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -166,27 +173,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -197,7 +204,7 @@
 									</div>
 					  	<!-------------->
 			     </div>
-			     <div class="swiper-slide">
+			     <div class="swiper-slide" da>
 			     			<!------------->
 			     			<div id="shop-list">
 										<ul class="sl-pro">
@@ -327,28 +334,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value="livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-attr-*="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
-															</span>
-															<span>
-																4216人在抢
-															</span>
+														<span ms-attr-*="value[0].marry">
+																
+														</span>
+														<span ms-attr-*="value[0].ren">
+															
+														</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-attr-*="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -358,25 +365,25 @@
 											<li></li>
 											<li>
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-attr-*="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-attr-*="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-attr-*="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-attr-*="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -837,8 +844,19 @@
 			     			<!---->
 			     </div>
 			  </div>
-			   
-		</div>	
+	
+	<!------------------------------------->
+	<div class="foot">
+              <img src="../../../images/arrow.png"/>
+              <span>上拉加载更多...</span>
+    </div>
+	<!---------------------->
+	</div>
+	
+	<!---------------------->
+	<div class="yo-loading" ms-visible="isShowlLoading" >
+	    <div class="inner"><i class="yo-ico"></i><span>加载中...</span></div>
+	</div>
   </section>	
   <div class="scroolTop" action-type="scroolTop" data-scroll-id="indexScroll">
   	<img src="../../../images/mipmap-xhdpi-v4/side_bg_up.png" />

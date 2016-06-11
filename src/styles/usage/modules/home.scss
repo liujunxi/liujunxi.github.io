@@ -1,3 +1,15 @@
+@include yo-loading(
+    $mask-bgcolor:rgba(200,200,200,1),
+    $color:red
+){
+    span{
+        color:yellow;
+    }
+}
+  
+  
+  
+  
    #home-header{
           height: .44rem;
           background-color: #229E92;
@@ -91,9 +103,54 @@
           width:100%;
           overflow: hidden;
           background-color:$border-color;
+            position:relative;
+          
           #containerSwiper{
               width:100%;
               height:100%;
+  //-----------下拉加载--------------------------------------------- 
+        .head {
+            height: .3rem;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+        }
+        .head img {
+            width: .14rem;
+            height: .14rem;
+            display: inline-block;
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            transition: transform 150ms;
+            -webkit-transition: transform 150ms;
+        }
+        .up {
+            transform: rotate(360deg) !important;
+            -webkit-transform: rotate(360deg) !important;
+        }
+        .foot {
+            height: .3rem;
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+        }
+        .foot img {
+            width: .14rem;
+            height: .14rem;
+            display: inline-block;
+            /*transform: rotate(0deg);*/
+            /*-webkit-transform: rotate(0deg);*/
+            transition: transform 150ms;
+            -webkit-transition: transform 150ms;
+        }
+        .down {
+            transform: rotate(180deg) !important;
+            -webkit-transform: rotate(180deg) !important;
+        }           
+ 
+
+//     -----------------------------------------    
+                   
           }
           #indexSwiper{
               width:100%;
@@ -280,9 +337,11 @@
               .sl-pro{
                   width:100%;
                   height:2.31rem;
-                  margin-top: .03rem;
+                  margin-top: .05rem;
                   @include flexbox();
+                  li.hidden{visibility:hidden;}
                   li{
+                      
                       width:100%;
                       &:nth-child(2){
                           width:.05rem;

@@ -43,6 +43,7 @@ SPA.defineView('index', {
 	      this.setActive($(e.el));				//给当前元素添加border
 	      this. indexSwiper= new Swiper('#containerSwiper', {
 		        loop: false,
+		        threshold : 50,
 		        onSlideChangeStart: function (swiper) {					//主题轮播控制导航
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
@@ -77,6 +78,7 @@ SPA.defineView('index', {
 	// 给视图绑定事件
 	bindEvents: {
 	    'beforeShow': function () {
+	    	var that = this;
 		      this.bannerSwiper = new Swiper('#indexSwiper', {
 		        loop: true,
 		        autoplay:2000,
@@ -85,9 +87,11 @@ SPA.defineView('index', {
 		      });
 		      this.indexSwiper = new Swiper('#containerSwiper', {
 		        loop: false,
+		        threshold : 20,
 		        onSlideChangeStart: function (swiper) {
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
+						
 		        }
 		      });
 	    },

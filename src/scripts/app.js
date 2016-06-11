@@ -11,6 +11,7 @@ require('./views/taobao.js');
 require('./views/shop.js');
 require('./views/myqu.js');
 require('./views/home.js');
+require('./views/xiaoguo.js');
 
 
 
