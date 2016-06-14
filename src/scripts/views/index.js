@@ -34,7 +34,7 @@ SPA.defineView('index', {
 	    //回到顶部
 	    "scroolTop" : function(e){
 	    	this.ScrollTop = new IScroll('#index-scroll', {});
-	    	this.ScrollTop.scrollTo(0,-30, 100, IScroll.utils.ease.quadratic   );
+	    	this.ScrollTop.scrollTo(0,0, 100, IScroll.utils.ease.quadratic   );
 
 	    },
 	    
@@ -44,7 +44,6 @@ SPA.defineView('index', {
 	      this.setActive($(e.el));				//给当前元素添加border
 	      this. indexSwiper= new Swiper('#containerSwiper', {
 		        loop: false,
-		        freeModeMomentumRatio : 0.5,
 		        threshold : 100,
 		        onSlideChangeStart: function (swiper) {					//主题轮播控制导航
 		          	$('#index-nav li').eq(swiper.activeIndex)
@@ -57,7 +56,6 @@ SPA.defineView('index', {
 		        autoplay:2000,
 		        speed:5,
 		        threshold : 100,
-		        freeModeMomentumRatio : 0.5,
 		        autoplayDisableOnInteraction : false,
 		   });
 		  //控制站内搜索    
@@ -81,26 +79,7 @@ SPA.defineView('index', {
 	
 	// 给视图绑定事件
 	bindEvents: {
-	    'beforeShow': function () {
-	    	
-	    	var that = this;
-		      this.bannerSwiper = new Swiper('#indexSwiper', {
-		        loop: true,
-		        autoplay:2000,
-		        speed:5,
-		        freeModeMomentumRatio : 0.5,
-		        autoplayDisableOnInteraction : false,
-		      });
-		      this.indexSwiper = new Swiper('#containerSwiper', {
-		        loop: false,
-		        threshold : 100,
-		        onSlideChangeStart: function (swiper) {
-		          	$('#index-nav li').eq(swiper.activeIndex)
-		            .addClass('active').siblings().removeClass('active');
-						
-		        }
-		      });
-	    },
+	   
 	    'show': function () {
 	    	
 	    	var that = this;
@@ -108,7 +87,6 @@ SPA.defineView('index', {
 		        loop: true,
 		        autoplay:2000,
 		        speed:5,
-		        freeModeMomentumRatio : 0.5,
 		        autoplayDisableOnInteraction : false,
 		      });
 		      this.indexSwiper = new Swiper('#containerSwiper', {
@@ -117,7 +95,6 @@ SPA.defineView('index', {
 		        onSlideChangeStart: function (swiper) {
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
-						
 		        }
 		      });
 	    },

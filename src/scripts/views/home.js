@@ -30,7 +30,7 @@ SPA.defineView('home', {
 		
 		"scroolTop" : function(e){
 	    	this.ScrollTop = new IScroll('#index-scroll', {});
-	    	this.ScrollTop.scrollTo(0,-30, 100, IScroll.utils.ease.quadratic   );
+	    	this.ScrollTop.scrollTo(0,0, 100, IScroll.utils.ease.quadratic   );
 				setTimeout(function(){
 					$(".scroolTop").css({"display":"none"});
 				},100)
@@ -79,68 +79,9 @@ SPA.defineView('home', {
 		}
 	},
 	
-	
-	
   
 	// 给视图绑定事件
 	bindEvents: {
-		'beforeShow': function () {
-						
-//		            var pScrollTop = that.widgets.indexScroll;
-//	    		pScrollTop.scrollTo(0, -30, 0, IScroll.utils.ease.quadratic );
-		      //---
-		      var that = this;
-		      this.bannerSwiper = new Swiper('#indexSwiper', {
-		        loop: true,
-		        autoplay:2000,
-		        speed:5,
-		        freeModeMomentumRatio : 0.5,
-		        autoplayDisableOnInteraction : false,
-		      });
-		      this.indexSwiper = new Swiper('#containerSwiper', {
-		        loop: false,
-		        threshold : 200,
-		        onSlideChangeStart: function (swiper) {
-		          	$('#index-nav li').eq(swiper.activeIndex)
-		            .addClass('active').siblings().removeClass('active');
-						if( $(e.el).index() == 0){
-							this.navScroll.scrollTo( 0 , 0 );
-						}
-						if( $(e.el).index() == 1){
-							this.navScroll.scrollTo( 0 , 0 );
-						}
-						if( $(e.el).index() == 2){
-							this.navScroll.scrollTo( -31 , 0 );
-						}
-						if( $(e.el).index() == 3){
-							this.navScroll.scrollTo( -85 , 0 );
-						}
-						if( $(e.el).index() == 4){
-							this.navScroll.scrollTo( -139 , 0 );
-						}
-						if( $(e.el).index() == 5){
-							this.navScroll.scrollTo( -193 , 0 );
-						}
-						if( $(e.el).index() == 6){
-							this.navScroll.scrollTo( -247 , 0 );
-						}
-						if( $(e.el).index() == 7){
-							this.navScroll.scrollTo( -329 , 0 );
-						}
-						if( $(e.el).index() == 8){
-							this.navScroll.scrollTo( -383 , 0 );
-						}
-						if( $(e.el).index() == 9){
-							this.navScroll.scrollTo( -465 , 0 );
-						}
-						if( $(e.el).index() == 10){
-							this.navScroll.scrollTo( -465, 0 );
-						}
-		        }
-		      });
-		      //---
-	   },
-	    
 	    'show': function () {
 	    	//--------
 	    	 var that = this;
@@ -157,39 +98,6 @@ SPA.defineView('home', {
 		        onSlideChangeStart: function (swiper) {
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
-						if( $(e.el).index() == 0){
-							this.navScroll.scrollTo( 0 , 0 );
-						}
-						if( $(e.el).index() == 1){
-							this.navScroll.scrollTo( 0 , 0 );
-						}
-						if( $(e.el).index() == 2){
-							this.navScroll.scrollTo( -31 , 0 );
-						}
-						if( $(e.el).index() == 3){
-							this.navScroll.scrollTo( -85 , 0 );
-						}
-						if( $(e.el).index() == 4){
-							this.navScroll.scrollTo( -139 , 0 );
-						}
-						if( $(e.el).index() == 5){
-							this.navScroll.scrollTo( -193 , 0 );
-						}
-						if( $(e.el).index() == 6){
-							this.navScroll.scrollTo( -247 , 0 );
-						}
-						if( $(e.el).index() == 7){
-							this.navScroll.scrollTo( -329 , 0 );
-						}
-						if( $(e.el).index() == 8){
-							this.navScroll.scrollTo( -383 , 0 );
-						}
-						if( $(e.el).index() == 9){
-							this.navScroll.scrollTo( -465 , 0 );
-						}
-						if( $(e.el).index() == 10){
-							this.navScroll.scrollTo( -465, 0 );
-						}
 		        }
 		      });
 	    	//------
@@ -246,35 +154,36 @@ SPA.defineView('home', {
 	      // 拖拽停止后的处理
 	      myScroll.on('scrollEnd', function () {
 	          // 松开到了上边界，弹回
-	          if (this.y >= -topSize && this.y < 0) {
-	              myScroll.scrollTo(0, -topSize);
-	              head.removeClass('up');
-	              
-	          } else if (this.y >= 0) {
-	          	$('.scroolTop').css("display","none");
-	              head.attr('src', '../../../images/ajax-loader.gif');
-	              // ajax下拉刷新数据
-	              $.ajax({
-	                url: '../../../mock/livelist.json',
-	                data: {
-	                  type: 'new'
-	                },
-	                success: function (res) {
-	                  // 将新数据prepend到临时的一维数组liveListArr里
-	                  that.liveListArr = res.data.concat(that.liveListArr);
-	
-	                  // 格式化最新的一维数组，进行avalon数组渲染
-	                  vm.livelist = that.formatData(that.liveListArr);
-	
-	                  // 恢复现场
-	                  setTimeout(function () {
-	                    myScroll.scrollTo(0, -topSize);
-	                    head.removeClass('up');
-	                    head.attr('src', '../../../images/arrow.png');
-	                  }, 0);
-	                }
-	              });
-	          }
+//	          if (this.y >= -topSize && this.y < 0) {
+//	              myScroll.scrollTo(0, -topSize);
+//	              head.removeClass('up');
+//	              
+//	          } 
+//	          else if (this.y >= 0) {
+//	          	$('.scroolTop').css("display","none");
+//	              head.attr('src', '../../../images/ajax-loader.gif');
+//	              // ajax下拉刷新数据
+//	              $.ajax({
+//	                url: '../../../mock/livelist.json',
+//	                data: {
+//	                  type: 'new'
+//	                },
+//	                success: function (res) {
+//	                  // 将新数据prepend到临时的一维数组liveListArr里
+//	                  that.liveListArr = res.data.concat(that.liveListArr);
+//	
+//	                  // 格式化最新的一维数组，进行avalon数组渲染
+//	                  vm.livelist = that.formatData(that.liveListArr);
+//	
+//	                  // 恢复现场
+//	                  setTimeout(function () {
+//	                    myScroll.scrollTo(0, -topSize);
+//	                    head.removeClass('up');
+//	                    head.attr('src', '../../../images/arrow.png');
+//	                  }, 0);
+//	                }
+//	              });
+//	          }
 	
 	          var maxY = this.maxScrollY - this.y;
 	          var self = this;
