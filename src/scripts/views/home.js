@@ -85,42 +85,114 @@ SPA.defineView('home', {
 	// 给视图绑定事件
 	bindEvents: {
 		'beforeShow': function () {
-	    	var that = this;
-		     
-		      this.indexSwiper = new Swiper('#containerSwiper', {
-		        loop: false,
-		        threshold : 20,
-		        onSlideChangeStart: function (swiper) {
-		          	$('#index-nav li').eq(swiper.activeIndex)
-		            .addClass('active').siblings().removeClass('active');
-						
 						
 //		            var pScrollTop = that.widgets.indexScroll;
 //	    		pScrollTop.scrollTo(0, -30, 0, IScroll.utils.ease.quadratic );
-		        }
-		      });
-		      
 		      //---
 		      var that = this;
 		      this.bannerSwiper = new Swiper('#indexSwiper', {
 		        loop: true,
 		        autoplay:2000,
 		        speed:5,
+		        freeModeMomentumRatio : 0.5,
 		        autoplayDisableOnInteraction : false,
 		      });
 		      this.indexSwiper = new Swiper('#containerSwiper', {
 		        loop: false,
-		        
+		        threshold : 200,
 		        onSlideChangeStart: function (swiper) {
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
-						
+						if( $(e.el).index() == 0){
+							this.navScroll.scrollTo( 0 , 0 );
+						}
+						if( $(e.el).index() == 1){
+							this.navScroll.scrollTo( 0 , 0 );
+						}
+						if( $(e.el).index() == 2){
+							this.navScroll.scrollTo( -31 , 0 );
+						}
+						if( $(e.el).index() == 3){
+							this.navScroll.scrollTo( -85 , 0 );
+						}
+						if( $(e.el).index() == 4){
+							this.navScroll.scrollTo( -139 , 0 );
+						}
+						if( $(e.el).index() == 5){
+							this.navScroll.scrollTo( -193 , 0 );
+						}
+						if( $(e.el).index() == 6){
+							this.navScroll.scrollTo( -247 , 0 );
+						}
+						if( $(e.el).index() == 7){
+							this.navScroll.scrollTo( -329 , 0 );
+						}
+						if( $(e.el).index() == 8){
+							this.navScroll.scrollTo( -383 , 0 );
+						}
+						if( $(e.el).index() == 9){
+							this.navScroll.scrollTo( -465 , 0 );
+						}
+						if( $(e.el).index() == 10){
+							this.navScroll.scrollTo( -465, 0 );
+						}
 		        }
 		      });
 		      //---
 	   },
 	    
 	    'show': function () {
+	    	//--------
+	    	 var that = this;
+		      this.bannerSwiper = new Swiper('#indexSwiper', {
+		        loop: true,
+		        autoplay:2000,
+		        speed:5,
+		        freeModeMomentumRatio : 0.5,
+		        autoplayDisableOnInteraction : false,
+		      });
+		      this.indexSwiper = new Swiper('#containerSwiper', {
+		        loop: false,
+		        threshold : 200,
+		        onSlideChangeStart: function (swiper) {
+		          	$('#index-nav li').eq(swiper.activeIndex)
+		            .addClass('active').siblings().removeClass('active');
+						if( $(e.el).index() == 0){
+							this.navScroll.scrollTo( 0 , 0 );
+						}
+						if( $(e.el).index() == 1){
+							this.navScroll.scrollTo( 0 , 0 );
+						}
+						if( $(e.el).index() == 2){
+							this.navScroll.scrollTo( -31 , 0 );
+						}
+						if( $(e.el).index() == 3){
+							this.navScroll.scrollTo( -85 , 0 );
+						}
+						if( $(e.el).index() == 4){
+							this.navScroll.scrollTo( -139 , 0 );
+						}
+						if( $(e.el).index() == 5){
+							this.navScroll.scrollTo( -193 , 0 );
+						}
+						if( $(e.el).index() == 6){
+							this.navScroll.scrollTo( -247 , 0 );
+						}
+						if( $(e.el).index() == 7){
+							this.navScroll.scrollTo( -329 , 0 );
+						}
+						if( $(e.el).index() == 8){
+							this.navScroll.scrollTo( -383 , 0 );
+						}
+						if( $(e.el).index() == 9){
+							this.navScroll.scrollTo( -465 , 0 );
+						}
+						if( $(e.el).index() == 10){
+							this.navScroll.scrollTo( -465, 0 );
+						}
+		        }
+		      });
+	    	//------
 	    	 	this.navScroll = this.widgets.navScroll
 		    	this.navScroll.options.scrollX = true;
 		    	this.navScroll.options.scrollY = false;
