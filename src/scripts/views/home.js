@@ -99,6 +99,25 @@ SPA.defineView('home', {
 //	    		pScrollTop.scrollTo(0, -30, 0, IScroll.utils.ease.quadratic );
 		        }
 		      });
+		      
+		      //---
+		      var that = this;
+		      this.bannerSwiper = new Swiper('#indexSwiper', {
+		        loop: true,
+		        autoplay:2000,
+		        speed:5,
+		        autoplayDisableOnInteraction : false,
+		      });
+		      this.indexSwiper = new Swiper('#containerSwiper', {
+		        loop: false,
+		        
+		        onSlideChangeStart: function (swiper) {
+		          	$('#index-nav li').eq(swiper.activeIndex)
+		            .addClass('active').siblings().removeClass('active');
+						
+		        }
+		      });
+		      //---
 	   },
 	    
 	    'show': function () {

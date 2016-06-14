@@ -77,7 +77,7 @@ SPA.defineView('index', {
 	
 	// 给视图绑定事件
 	bindEvents: {
-	    'show': function () {
+	    'beforeShow': function () {
 	    	
 	    	var that = this;
 		      this.bannerSwiper = new Swiper('#indexSwiper', {
