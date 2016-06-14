@@ -109,7 +109,7 @@ SPA.defineView('home', {
 	    	var vm = this.getVM();
 	    	var that = this;
 	    		$.ajax({
-	    			url:"/liqu/mock/livelist.json",
+	    			url:"../../../mock/livelist.json",
 	    			success:function(res){
 	    				vm.isShowlLoading = false;
 	    				var data = res.data;
@@ -164,7 +164,7 @@ SPA.defineView('home', {
 	              head.attr('src', '../../../images/ajax-loader.gif');
 	              // ajax下拉刷新数据
 	              $.ajax({
-	                url: '/api/getlivelist.php',
+	                url: '../../../mock/livelist.json',
 	                data: {
 	                  type: 'new'
 	                },
@@ -197,7 +197,7 @@ SPA.defineView('home', {
 	
 	              // ajax上拉加载数据
 	              $.ajax({
-	                url: '/api/getlivelist.php',
+	                url: '../../../mock/livelist.json',
 //	                data: {
 //	                  type: 'more'
 //	                },
