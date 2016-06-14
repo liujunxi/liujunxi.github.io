@@ -85,28 +85,26 @@ SPA.defineView('home', {
 	    'show': function () {
 	    	//--------
 	    	 var that = this;
-		      this.bannerSwiper = new Swiper('#indexSwiper', {
-		        loop: true,
-		        autoplay:2000,
-		        speed:5,
-		        freeModeMomentumRatio : 0.5,
-		        autoplayDisableOnInteraction : false,
-		      });
-		      this.indexSwiper = new Swiper('#containerSwiper', {
-		        loop: false,
-		        threshold : 200,
-		        onSlideChangeStart: function (swiper) {
-		          	$('#index-nav li').eq(swiper.activeIndex)
-		            .addClass('active').siblings().removeClass('active');
-		        }
-		      });
+//		      this.bannerSwiper = new Swiper('#indexSwiper', {
+//		        loop: true,
+//		        autoplay:2000,
+//		        speed:5,
+//		        autoplayDisableOnInteraction : false,
+//		      });
+//		      this.indexSwiper = new Swiper('#containerSwiper', {
+//		        loop: false,
+//		        onSlideChangeStart: function (swiper) {
+//		          	$('#index-nav li').eq(swiper.activeIndex)
+//		            .addClass('active').siblings().removeClass('active');
+//		        }
+//		      });
 	    	//------
 	    	 	this.navScroll = this.widgets.navScroll
 		    	this.navScroll.options.scrollX = true;
 		    	this.navScroll.options.scrollY = false;
 		    	
 	    	var vm = this.getVM();
-	    	var that = this;
+	    	
 	    		$.ajax({
 	    			url:"../../../mock/livelist.json",
 	    			success:function(res){
@@ -126,7 +124,7 @@ SPA.defineView('home', {
 	      var myScroll = this.widgets.indexScroll;//引用当前isscroll对象
 	      var topSize = 30;
 	
-	      myScroll.scrollBy(0, -topSize);
+	      myScroll.scrollBy(0, 0);
 	
 	      var head = $('.head img'),
 	          topImgHasClass = head.hasClass('up');
@@ -135,17 +133,17 @@ SPA.defineView('home', {
 	
 	      // 判断顶部与底部的边界
 	      myScroll.on('scroll', function () {
-	          var y = this.y,
-	              maxY = this.maxScrollY - y;
-	          if (y >= 0) {
-	              !topImgHasClass && head.addClass('up');
-	             
-	              return '';
-	          }
-	          if (maxY >= 0) {
-	              !bottomImgHasClass && foot.addClass('down');
-	              return '';
-	          }
+	          var y = this.y;
+//	              maxY = this.maxScrollY - y;
+//	          if (y >= 0) {
+//	              !topImgHasClass && head.addClass('up');
+//	             
+//	              return '';
+//	          }
+//	          if (maxY >= 0) {
+//	              !bottomImgHasClass && foot.addClass('down');
+//	              return '';
+//	          }
 	          if(y < -100){
 	          	$(".scroolTop").css("display","block")
 	          }
@@ -190,7 +188,7 @@ SPA.defineView('home', {
 	
 	          // 底部收回
 	          if (maxY > -topSize && maxY < 0) {
-	              myScroll.scrollTo(0, self.maxScrollY + topSize);
+	              myScroll.scrollTo(0, self.maxScrollY);
 	              foot.removeClass('down')
 	          } else if (maxY >= 0) {
 	              foot.attr('src', '../../../images/ajax-loader.gif');
@@ -211,7 +209,7 @@ SPA.defineView('home', {
 	
 	                  // 恢复现场
 	                  setTimeout(function () {
-	                    myScroll.scrollTo(0, self.y + topSize);
+	                    myScroll.scrollTo(0, self.y );
 	                    foot.removeClass('down');
 	                    foot.attr('src', '../../../images/arrow.png');
 	                  }, 0);

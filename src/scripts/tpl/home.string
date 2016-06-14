@@ -35,10 +35,10 @@
   	
   	<div class="swiper-container" id="containerSwiper" ms-visible="!isShowlLoading">
   		<!------------------------>
-  	<div class="head">
+  	<!--<div class="head">
               <img src="../../../images/arrow.png"/>
               <span>下拉刷新...</span>
-    </div>
+    </div>-->
     <!------------------------------>
 			 <div class="swiper-wrapper">
 			    <div class="swiper-slide">

@@ -44,7 +44,7 @@ SPA.defineView('index', {
 	      this.setActive($(e.el));				//给当前元素添加border
 	      this. indexSwiper= new Swiper('#containerSwiper', {
 		        loop: false,
-		        threshold : 100,
+		       
 		        onSlideChangeStart: function (swiper) {					//主题轮播控制导航
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
@@ -55,7 +55,7 @@ SPA.defineView('index', {
 		        loop: true,
 		        autoplay:2000,
 		        speed:5,
-		        threshold : 100,
+		        
 		        autoplayDisableOnInteraction : false,
 		   });
 		  //控制站内搜索    
@@ -89,6 +89,7 @@ SPA.defineView('index', {
 		        speed:5,
 		        autoplayDisableOnInteraction : false,
 		      });
+		      
 		      this.indexSwiper = new Swiper('#containerSwiper', {
 		        loop: false,
 		        threshold : 100,
