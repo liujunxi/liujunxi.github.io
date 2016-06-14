@@ -46,14 +46,26 @@
 						  		<div class="swiper-container" id="indexSwiper">
 								    <div class="swiper-wrapper">
 								        <div class="swiper-slide">
-								        	<img src="../../../images/banner.png"/>
+								        	<img src="../../../images/bannerniu.jpg"/>
 								        </div>
 								        <div class="swiper-slide">
-								        	<img src="../../../images/banner2.png"/>
+								        	<img src="../../../images/banner1-3.jpg"/>
+								        </div>
+								         <div class="swiper-slide">
+								        	<img src="../../../images/banner1-1.jpg"/>
+								        </div>
+								         <div class="swiper-slide">
+								        	<img src="../../../images/banner1-2.jpg"/>
+								        </div>
+								         <div class="swiper-slide">
+								        	<img src="../../../images/banner5.jpg"/>
+								        </div>
+								         <div class="swiper-slide">
+								        	<img src="../../../images/banner1-6.jpg"/>
 								        </div>
 								    </div>
 								    <!-- 如果需要分页器 -->
-								    <div class="swiper-pagination"></div>
+								    <!--<div class="swiper-pagination"></div>-->
 									</div>	
 							  	<div id="search-list">
 								  	<ul>
@@ -140,7 +152,7 @@
 													<img src="../../../images/fanli100.jpg"/>
 												</span>
 											</li>
-											<li>19055人参与|0天12小时34分3秒</li>
+											<li>19055人参与抢购</li>
 										</ul>
 									</div>
 									<div id="shop-list">
@@ -207,28 +219,28 @@
 			     <div class="swiper-slide" da>
 			     			<!------------->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -236,27 +248,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -270,92 +282,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
-											<li>
-												<i>
-													<img src="../../../images/s-2.jpg"/>
-												</i>
-												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
-													<i>
-														<span>
-																¥69.00
-															</span>
-															<span>
-																4216人在抢
-															</span>
-													</i>
-													<i>
-															<span>返15.80</span>
-															<span>
-																<img src="../../../images/fanli.jpg"/>
-															</span>
-															<span>
-																<img src="../../../images/manyi.png"/>
-															</span>
-													</i>
-												</div>
-													
-												
-											</li>
-											<li></li>
-											<li>
-												<i>
-													<img src="../../../images/s-1.jpg"/>
-												</i>
-												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
-														<i>
-															<span>
-																¥12.90
-															</span>
-															<span>
-																17361人在抢
-															</span>
-														</i>
-														<i>
-															<span>返2.32</span>
-															<span>
-																<img src="../../../images/fanli.jpg"/>
-															</span>
-															<span>
-																<img src="../../../images/manyi.png"/>
-															</span>
-														</i>
-													
-												</div>
-												
-											</li>
-										</ul>
-									</div>
-			     				
-			     			<!---->
-			     </div>
-			     <div class="swiper-slide">
-			     			<!---->
-			     			<div id="shop-list">
-										<ul class="sl-pro" ms-repeat-value="livelist">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
 													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i ms-attr-*="value[0].shopUser"></i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span ms-attr-*="value[0].marry">
+														<span ms-text="value[0].marry">
 																
-														</span>
-														<span ms-attr-*="value[0].ren">
-															
-														</span>
+															</span>
+															<span ms-text="value[0].ren">
+																
+															</span>
 													</i>
 													<i>
-															<span ms-attr-*="value[0].goto"></span>
+															<span ms-text="value[0].goto"></span>
 															<span>
 																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img ms-src="value[0].imgsrc3"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -363,27 +311,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img ms-src="value[1].imgsrc"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i ms-attr-*="value[1].shopUser"></i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span ms-attr-*="value[1].marry">
+															<span ms-text="value[1].marry">
 																
 															</span>
-															<span ms-attr-*="value[1].ren">
+															<span ms-text="value[1].ren">
 																
 															</span>
 														</i>
 														<i>
-															<span  ms-attr-*="value[1].goto"></span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
 																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img  ms-src="value[1].imgsrc3"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -398,28 +346,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -427,27 +375,90 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
+															</span>
+														</i>
+													
+												</div>
+												
+											</li>
+										</ul>
+									</div>
+			     			<!---->
+			     </div>
+			     <div class="swiper-slide">
+			     			<!---->
+			     			<div id="shop-list">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
+											<li>
+												<i>
+													<img ms-src="value[0].imgsrc"/>
+												</i>
+												<div class="jiage">
+													<i ms-text="value[0].shopUser"></i>
+													<i>
+														<span ms-text="value[0].marry">
+																
+															</span>
+															<span ms-text="value[0].ren">
+																
+															</span>
+													</i>
+													<i>
+															<span ms-text="value[0].goto"></span>
+															<span>
+																<img ms-src="value[0].imgsrc2"/>
+															</span>
+															<span>
+																<img  ms-src="value[0].imgsrc3"/>
+															</span>
+													</i>
+												</div>
+													
+												
+											</li>
+											<li></li>
+											<li ms-class-hidden="!value[1]">
+												<i>
+													<img  ms-src="value[1].imgsrc"/>
+												</i>
+												<div class="jiage">
+														<i ms-text="value[1].shopUser"></i>
+														<i>
+															<span ms-text="value[1].marry">
+																
+															</span>
+															<span ms-text="value[1].ren">
+																
+															</span>
+														</i>
+														<i>
+															<span  ms-text="value[1].goto"></span>
+															<span>
+																<img ms-src="value[1].imgsrc2"/>
+															</span>
+															<span>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -462,28 +473,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -491,27 +502,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -526,28 +537,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -555,27 +566,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -590,28 +601,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -619,27 +630,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -654,28 +665,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -683,27 +694,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -718,28 +729,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -747,27 +758,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													
@@ -782,28 +793,28 @@
 			     <div class="swiper-slide">
 			     			<!---->
 			     			<div id="shop-list">
-										<ul class="sl-pro">
+										<ul class="sl-pro" ms-repeat-value = "livelist">
 											<li>
 												<i>
-													<img src="../../../images/s-2.jpg"/>
+													<img ms-src="value[0].imgsrc"/>
 												</i>
 												<div class="jiage">
-													<i>【领卷】家用原汁机</i>
+													<i ms-text="value[0].shopUser"></i>
 													<i>
-														<span>
-																¥69.00
+														<span ms-text="value[0].marry">
+																
 															</span>
-															<span>
-																4216人在抢
+															<span ms-text="value[0].ren">
+																
 															</span>
 													</i>
 													<i>
-															<span>返15.80</span>
+															<span ms-text="value[0].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[0].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img  ms-src="value[0].imgsrc3"/>
 															</span>
 													</i>
 												</div>
@@ -811,27 +822,27 @@
 												
 											</li>
 											<li></li>
-											<li>
+											<li ms-class-hidden="!value[1]">
 												<i>
-													<img src="../../../images/s-1.jpg"/>
+													<img  ms-src="value[1].imgsrc"/>
 												</i>
 												<div class="jiage">
-														<i>【领卷】买1送1夏季</i>
+														<i ms-text="value[1].shopUser"></i>
 														<i>
-															<span>
-																¥12.90
+															<span ms-text="value[1].marry">
+																
 															</span>
-															<span>
-																17361人在抢
+															<span ms-text="value[1].ren">
+																
 															</span>
 														</i>
 														<i>
-															<span>返2.32</span>
+															<span  ms-text="value[1].goto"></span>
 															<span>
-																<img src="../../../images/fanli.jpg"/>
+																<img ms-src="value[1].imgsrc2"/>
 															</span>
 															<span>
-																<img src="../../../images/manyi.png"/>
+																<img ms-src="value[1].imgsrc3"/>
 															</span>
 														</i>
 													

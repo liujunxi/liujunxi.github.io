@@ -34,7 +34,8 @@ SPA.defineView('index', {
 	    //回到顶部
 	    "scroolTop" : function(e){
 	    	this.ScrollTop = new IScroll('#index-scroll', {});
-	    	this.ScrollTop.scrollTo(0, 0, 100, IScroll.utils.ease.quadratic   );
+	    	this.ScrollTop.scrollTo(0,-30, 100, IScroll.utils.ease.quadratic   );
+
 	    },
 	    
 	    'switch.view': function (e) {
@@ -43,7 +44,6 @@ SPA.defineView('index', {
 	      this.setActive($(e.el));				//给当前元素添加border
 	      this. indexSwiper= new Swiper('#containerSwiper', {
 		        loop: false,
-		        threshold : 50,
 		        onSlideChangeStart: function (swiper) {					//主题轮播控制导航
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');
@@ -77,7 +77,8 @@ SPA.defineView('index', {
 	
 	// 给视图绑定事件
 	bindEvents: {
-	    'beforeShow': function () {
+	    'show': function () {
+	    	
 	    	var that = this;
 		      this.bannerSwiper = new Swiper('#indexSwiper', {
 		        loop: true,
@@ -87,7 +88,7 @@ SPA.defineView('index', {
 		      });
 		      this.indexSwiper = new Swiper('#containerSwiper', {
 		        loop: false,
-		        threshold : 20,
+		        
 		        onSlideChangeStart: function (swiper) {
 		          	$('#index-nav li').eq(swiper.activeIndex)
 		            .addClass('active').siblings().removeClass('active');

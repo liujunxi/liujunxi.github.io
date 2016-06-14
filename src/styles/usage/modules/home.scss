@@ -1,12 +1,13 @@
 @include yo-loading(
-    $mask-bgcolor:rgba(200,200,200,1),
-    $color:red
-){
-    span{
-        color:yellow;
-    }
-}
-  
+    $mask-bgcolor:rgba(200,200,200,1)
+//  $color:red
+)
+//{
+//  span{
+//      color:yellow;
+//  }
+//}
+.scroolTop{display:none;} 
   
   
   

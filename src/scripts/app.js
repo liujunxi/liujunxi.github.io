@@ -17,5 +17,6 @@ require('./views/xiaoguo.js');
 
 //   配置视图的信息
 SPA.config({
-	indexView: SPA.util.storage('isVisited') ? "index" : "guide" 
+//	indexView: SPA.util.storage('isVisited') ? "index" : "guide" 
+	indexView:"guide"
 });

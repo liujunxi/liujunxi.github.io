@@ -22,12 +22,19 @@ SPA.defineView('home', {
 				temp[i][1] = data[2*i+1]; 
 			}
 			return temp;
-		
 		},
 		liveListArr:[]
 	},
 	
 	bindActions:{
+		
+		"scroolTop" : function(e){
+	    	this.ScrollTop = new IScroll('#index-scroll', {});
+	    	this.ScrollTop.scrollTo(0,-30, 100, IScroll.utils.ease.quadratic   );
+				setTimeout(function(){
+					$(".scroolTop").css({"display":"none"});
+				},100)
+	    },
 		
 		"switch.swiper" : function(e,data){
 			var _win = window.innerWidth;
@@ -35,7 +42,7 @@ SPA.defineView('home', {
 			var _offset = $(e.el).offset().left;
 			var center = (_win - _width)/2;
 			var go = center - _offset;
-			console.log(_width)
+			
 			if( $(e.el).index() == 0){
 				this.navScroll.scrollTo( 0 , 0 );
 			}
@@ -69,16 +76,7 @@ SPA.defineView('home', {
 			if( $(e.el).index() == 10){
 				this.navScroll.scrollTo( -465, 0 );
 			}
-			
-			
-			
-			
-			
-			
 		}
-		
-		
-		
 	},
 	
 	
@@ -97,8 +95,8 @@ SPA.defineView('home', {
 		            .addClass('active').siblings().removeClass('active');
 						
 						
-		            var pScrollTop = that.widgets.indexScroll;//
-	    		pScrollTop.scrollTo(0, 0, 0, IScroll.utils.ease.quadratic );
+//		            var pScrollTop = that.widgets.indexScroll;
+//	    		pScrollTop.scrollTo(0, -30, 0, IScroll.utils.ease.quadratic );
 		        }
 		      });
 	   },
@@ -111,7 +109,7 @@ SPA.defineView('home', {
 	    	var vm = this.getVM();
 	    	var that = this;
 	    		$.ajax({
-	    			url:"api/getlivelist.php",
+	    			url:"/liqu/mock/livelist.json",
 	    			success:function(res){
 	    				vm.isShowlLoading = false;
 	    				var data = res.data;
@@ -142,22 +140,27 @@ SPA.defineView('home', {
 	              maxY = this.maxScrollY - y;
 	          if (y >= 0) {
 	              !topImgHasClass && head.addClass('up');
+	             
 	              return '';
 	          }
 	          if (maxY >= 0) {
 	              !bottomImgHasClass && foot.addClass('down');
 	              return '';
 	          }
+	          if(y < -100){
+	          	$(".scroolTop").css("display","block")
+	          }
 	      });
 	
 	      // 拖拽停止后的处理
 	      myScroll.on('scrollEnd', function () {
-	
 	          // 松开到了上边界，弹回
 	          if (this.y >= -topSize && this.y < 0) {
 	              myScroll.scrollTo(0, -topSize);
 	              head.removeClass('up');
+	              
 	          } else if (this.y >= 0) {
+	          	$('.scroolTop').css("display","none");
 	              head.attr('src', '../../../images/ajax-loader.gif');
 	              // ajax下拉刷新数据
 	              $.ajax({
