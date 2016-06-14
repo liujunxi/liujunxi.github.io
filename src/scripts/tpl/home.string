@@ -33,7 +33,7 @@
   </nav>
   <section id="index-scroll" spa-widget="scroll"  data-scroll-id="indexScroll" class="home-section">
   	
-  	<div class="swiper-container" id="containerSwiper" ms-visible="!isShowlLoading">
+  	<div class="swiper-container" id="containerSwiper" ms-visible="isShowlLoading">
   		<!------------------------>
   	<div class="head">
               <img src="../../../images/arrow.png"/>
@@ -865,7 +865,7 @@
 	</div>
 	
 	<!---------------------->
-	<div class="yo-loading" ms-visible="isShowlLoading" >
+	<div class="yo-loading" ms-visible="!isShowlLoading" >
 	    <div class="inner"><i class="yo-ico"></i><span>加载中...</span></div>
 	</div>
   </section>	
