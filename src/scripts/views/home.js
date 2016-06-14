@@ -215,6 +215,7 @@ SPA.defineView('home', {
 	                    foot.removeClass('down');
 	                    foot.attr('src', '../../../images/arrow.png');
 	                  }, 0);
+	                  
 	                }
 	              });
 	          }
